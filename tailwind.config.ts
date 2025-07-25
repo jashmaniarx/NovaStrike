@@ -61,7 +61,29 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom glass colors
+				glass: {
+					DEFAULT: 'hsl(var(--glass-bg))',
+					border: 'hsl(var(--glass-border))',
+					shadow: 'hsl(var(--glass-shadow))'
+				},
+				glow: {
+					primary: 'hsl(var(--glow-primary))',
+					secondary: 'hsl(var(--glow-secondary))',
+					accent: 'hsl(var(--glow-accent))'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
+				display: ['Montserrat', 'Inter', 'sans-serif']
+			},
+			backdropBlur: {
+				xs: '2px',
+				sm: '8px',
+				md: '16px',
+				lg: '32px',
+				xl: '64px'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +106,54 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsl(var(--glow-primary))',
+						opacity: '1' 
+					},
+					'50%': { 
+						boxShadow: '0 0 40px hsl(var(--glow-primary)), 0 0 60px hsl(var(--glow-primary))',
+						opacity: '0.8' 
+					}
+				},
+				'slide-up': {
+					'0%': { 
+						transform: 'translateY(100px)',
+						opacity: '0' 
+					},
+					'100%': { 
+						transform: 'translateY(0)',
+						opacity: '1' 
+					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'scale-in': {
+					'0%': { 
+						transform: 'scale(0.8)',
+						opacity: '0' 
+					},
+					'100%': { 
+						transform: 'scale(1)',
+						opacity: '1' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'fade-in': 'fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+				'scale-in': 'scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
 			}
 		}
 	},
