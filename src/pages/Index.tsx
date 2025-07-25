@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import SkillsGrid from '@/components/SkillsGrid';
 import TutorialPlayer from '@/components/TutorialPlayer';
 import TipCards from '@/components/TipCards';
-import UserReviews from '@/components/UserReviews';
 
 const Index = () => {
   return (
@@ -33,11 +32,8 @@ const Index = () => {
         </section>
         
         {/* Tip Cards */}
-        <TipCards />
-        
-        {/* User Reviews */}
-        <section id="community">
-          <UserReviews />
+        <section id="tips">
+          <TipCards />
         </section>
       </main>
       
