@@ -42,7 +42,6 @@ const skills = [
 ];
 
 const SkillsGrid = () => {
-  const [isTrainingModalOpen, setIsTrainingModalOpen] = useState(false);
   return (
     <section className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -93,11 +92,6 @@ const SkillsGrid = () => {
         </div>
       </div>
       
-      {/* Training Modal */}
-      <TrainingModal 
-        isOpen={isTrainingModalOpen} 
-        onClose={() => setIsTrainingModalOpen(false)} 
-      />
     </section>
   );
 };
