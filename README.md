@@ -1,1 +1,1 @@
-(https://nova-strike.jashmaniar.app)[https://nova-strike-nine.vercel.app]
+[https://nova-strike.jashmaniar.app](https://nova-strike-nine.vercel.app)
