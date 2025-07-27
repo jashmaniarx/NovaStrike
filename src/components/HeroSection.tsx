@@ -14,13 +14,13 @@ const HeroSection = () => {
       </div>
       
       {/* Floating Glass Container */}
-      <div className="relative z-10 glass-strong rounded-3xl p-8 md:p-12 lg:p-16 max-w-4xl mx-4 text-center animate-slide-up">
+      <div className="relative z-10 glass-strong rounded-3xl p-8 md:p-12 lg:p-16 max-w-4xl mx-4 text-center animate-slide-up glass-hover-enhanced">
         <div className="space-y-6">
           {/* Main Title */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
             <span className="block">Welcome to</span>
             <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              NOVASTRIKER
+              novastriker
             </span>
           </h1>
           
@@ -51,9 +51,11 @@ const HeroSection = () => {
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/10 animate-float" />
+        <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/10 animate-float animate-pulse-glow" />
         <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-secondary/10 animate-float" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 -right-8 w-12 h-12 rounded-full bg-accent/10 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 -left-6 w-8 h-8 rounded-full bg-primary/20 animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-6 h-6 rounded-full bg-accent/20 animate-float" style={{ animationDelay: '2.5s' }} />
       </div>
       
       {/* Scroll Indicator */}

@@ -7,6 +7,7 @@ import TacticalTips from '@/components/TacticalTips';
 import TipsPage from '@/components/TipsPage';
 import ProTipsInsights from '@/components/ProTipsInsights';
 import Footer from '@/components/Footer';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Index = () => {
   return (
@@ -16,6 +17,9 @@ const Index = () => {
       
       {/* Navigation */}
       <Navigation />
+      
+      {/* Theme Toggle */}
+      <ThemeToggle />
       
       {/* Main Content */}
       <main>
