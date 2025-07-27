@@ -7,11 +7,19 @@ const Navigation = () => {
 
   const navItems = [
     { icon: Home, label: 'Home', href: '#home' },
-    { icon: Play, label: 'Skills', href: '#skills' },
-    { icon: BookOpen, label: 'Tutorials', href: '#tutorials' },
-    { icon: Users, label: 'Community', href: '#community' },
-    { icon: Trophy, label: 'Challenges', href: '#challenges' }
+    { icon: Play, label: 'Videos', href: '#videos' },
+    { icon: BookOpen, label: 'Stats', href: '#stats' },
+    { icon: Users, label: 'Tips', href: '#tips' },
+    { icon: Trophy, label: 'Matches', href: '#matches' }
   ];
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -21,7 +29,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-8">
             {/* Logo */}
             <div className="font-display font-bold text-xl text-primary">
-              LQD<span className="text-foreground">Skills</span>
+              Pure<span className="text-foreground">Motion</span>
             </div>
             
             {/* Nav Items */}
@@ -29,16 +37,16 @@ const Navigation = () => {
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <a
+                  <button
                     key={item.label}
-                    href={item.href}
+                    onClick={() => handleNavClick(item.href)}
                     className="group flex items-center space-x-2 px-3 py-2 rounded-full glass-hover transition-all duration-300 hover:bg-primary/10"
                   >
                     <Icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
                     <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       {item.label}
                     </span>
-                  </a>
+                  </button>
                 );
               })}
             </div>
@@ -60,7 +68,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Mobile Logo */}
             <div className="font-display font-bold text-lg text-primary">
-              LQD<span className="text-foreground">Skills</span>
+              Pure<span className="text-foreground">Motion</span>
             </div>
             
             {/* Mobile Menu Button */}
@@ -81,15 +89,14 @@ const Navigation = () => {
                 {navItems.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <a
+                    <button
                       key={item.label}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => handleNavClick(item.href)}
                       className="flex items-center space-x-3 px-4 py-3 rounded-2xl glass-hover transition-all duration-300 hover:bg-primary/10"
                     >
                       <Icon className="w-5 h-5 text-primary" />
                       <span className="text-foreground font-medium">{item.label}</span>
-                    </a>
+                    </button>
                   );
                 })}
                 <div className="pt-4">
@@ -112,16 +119,16 @@ const Navigation = () => {
             {navItems.slice(0, 4).map((item) => {
               const Icon = item.icon;
               return (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
+                  onClick={() => handleNavClick(item.href)}
                   className="group flex flex-col items-center space-y-1 p-2 rounded-2xl glass-hover transition-all duration-300"
                 >
                   <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
                   <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors duration-300">
                     {item.label}
                   </span>
-                </a>
+                </button>
               );
             })}
           </div>

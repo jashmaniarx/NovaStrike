@@ -18,32 +18,34 @@ const HeroSection = () => {
         <div className="space-y-6">
           {/* Main Title */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            <span className="block">Master Your</span>
+            <span className="block">Welcome to</span>
             <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Football Skills
+              PureMotion
             </span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Elevate your game with professional techniques, expert tutorials, and cutting-edge training methods
+            Your ultimate football companion with live matches, expert tips, and comprehensive video library
           </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <Button 
               size="lg" 
+              onClick={() => document.querySelector('#videos')?.scrollIntoView({ behavior: 'smooth' })}
               className="glass-hover bg-primary/20 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-semibold rounded-2xl min-w-[200px]"
             >
               <Play className="w-5 h-5 mr-2" />
-              Start Training
+              Watch Videos
             </Button>
             <Button 
               variant="outline" 
               size="lg"
+              onClick={() => document.querySelector('#matches')?.scrollIntoView({ behavior: 'smooth' })}
               className="glass-hover bg-glass border-glass-border text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-4 text-lg rounded-2xl min-w-[200px]"
             >
-              Explore Skills
+              Live Matches
             </Button>
           </div>
         </div>
@@ -60,6 +62,7 @@ const HeroSection = () => {
           <div className="w-1 h-8 bg-gradient-to-b from-primary to-transparent rounded-full mx-auto" />
         </div>
       </div>
+      
     </section>
   );
 };

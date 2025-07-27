@@ -1,4 +1,6 @@
 import { Zap, Target, Users, Gamepad2, Shield, Star } from 'lucide-react';
+import { useState } from 'react';
+import TrainingModal from './TrainingModal';
 
 const skills = [
   {
@@ -60,6 +62,7 @@ const SkillsGrid = () => {
             return (
               <div
                 key={skill.title}
+                onClick={() => setIsTrainingModalOpen(true)}
                 className="group glass-hover glass-strong rounded-3xl p-8 cursor-pointer animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -88,6 +91,7 @@ const SkillsGrid = () => {
           })}
         </div>
       </div>
+      
     </section>
   );
 };

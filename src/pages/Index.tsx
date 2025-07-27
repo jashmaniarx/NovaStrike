@@ -4,7 +4,10 @@ import HeroSection from '@/components/HeroSection';
 import SkillsGrid from '@/components/SkillsGrid';
 import TutorialPlayer from '@/components/TutorialPlayer';
 import TipCards from '@/components/TipCards';
-import UserReviews from '@/components/UserReviews';
+import LiveMatchFeed from '@/components/LiveMatchFeed';
+import StatsDashboard from '@/components/StatsDashboard';
+import TipsPage from '@/components/TipsPage';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -22,24 +25,29 @@ const Index = () => {
           <HeroSection />
         </section>
         
-        {/* Skills Grid */}
-        <section id="skills">
-          <SkillsGrid />
+        {/* Live Match Feed */}
+        <section id="matches">
+          <LiveMatchFeed />
         </section>
         
-        {/* Tutorial Player */}
-        <section id="tutorials">
+        {/* Video Library */}
+        <section id="videos">
           <TutorialPlayer />
         </section>
         
-        {/* Tip Cards */}
-        <TipCards />
+        {/* Stats Dashboard */}
+        <section id="stats">
+          <StatsDashboard />
+        </section>
         
-        {/* User Reviews */}
-        <section id="community">
-          <UserReviews />
+        {/* Health Tips */}
+        <section id="tips">
+          <TipsPage />
         </section>
       </main>
+      
+      {/* Footer */}
+      <Footer />
       
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none">

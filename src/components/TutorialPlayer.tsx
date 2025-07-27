@@ -21,28 +21,35 @@ const TutorialPlayer = () => {
         {/* Video Player Container */}
         <div className="glass-strong rounded-3xl p-6 animate-fade-in">
           {/* Video Display Area */}
-          <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-muted/30 to-background/20">
-            {/* Placeholder for video - in real implementation this would be a video element */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 rounded-full glass flex items-center justify-center mx-auto">
-                  {isPlaying ? (
-                    <Pause className="w-8 h-8 text-primary" />
-                  ) : (
-                    <Play className="w-8 h-8 text-primary" />
-                  )}
+          <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
+            {!isPlaying ? (
+              <div className="relative w-full h-full">
+                <img
+                  src="https://img.youtube.com/vi/Fj3Jsn0Pa7c/maxresdefault.jpg"
+                  alt="Perfect Your First Touch Tutorial"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <button
+                    onClick={() => setIsPlaying(true)}
+                    className="w-20 h-20 rounded-full glass flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <Play className="w-8 h-8 text-primary ml-1" />
+                  </button>
                 </div>
-                <p className="text-muted-foreground">Click to play tutorial</p>
               </div>
-            </div>
-            
-            {/* Play Button Overlay */}
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="absolute inset-0 w-full h-full cursor-pointer group"
-            >
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-            </button>
+            ) : (
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Fj3Jsn0Pa7c?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0"
+                title="Perfect Your First Touch - Football Tutorial"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full rounded-2xl"
+              />
+            )}
           </div>
           
           {/* Controls */}
