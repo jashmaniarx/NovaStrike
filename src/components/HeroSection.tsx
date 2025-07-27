@@ -1,11 +1,8 @@
 import { Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
 import heroImage from '@/assets/hero-bg.jpg';
-import TrainingModal from './TrainingModal';
 
 const HeroSection = () => {
-  const [isTrainingModalOpen, setIsTrainingModalOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Blur */}
@@ -36,7 +33,6 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <Button 
               size="lg" 
-              onClick={() => setIsTrainingModalOpen(true)}
               className="glass-hover bg-primary/20 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-semibold rounded-2xl min-w-[200px]"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -64,12 +60,6 @@ const HeroSection = () => {
           <div className="w-1 h-8 bg-gradient-to-b from-primary to-transparent rounded-full mx-auto" />
         </div>
       </div>
-      
-      {/* Training Modal */}
-      <TrainingModal 
-        isOpen={isTrainingModalOpen} 
-        onClose={() => setIsTrainingModalOpen(false)} 
-      />
     </section>
   );
 };

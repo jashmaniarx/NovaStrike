@@ -1,6 +1,4 @@
 import { Zap, Target, Users, Gamepad2, Shield, Star } from 'lucide-react';
-import { useState } from 'react';
-import TrainingModal from './TrainingModal';
 
 const skills = [
   {
@@ -42,7 +40,6 @@ const skills = [
 ];
 
 const SkillsGrid = () => {
-  const [isTrainingModalOpen, setIsTrainingModalOpen] = useState(false);
   return (
     <section className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -63,7 +60,6 @@ const SkillsGrid = () => {
             return (
               <div
                 key={skill.title}
-                onClick={() => setIsTrainingModalOpen(true)}
                 className="group glass-hover glass-strong rounded-3xl p-8 cursor-pointer animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -92,12 +88,6 @@ const SkillsGrid = () => {
           })}
         </div>
       </div>
-      
-      {/* Training Modal */}
-      <TrainingModal 
-        isOpen={isTrainingModalOpen} 
-        onClose={() => setIsTrainingModalOpen(false)} 
-      />
     </section>
   );
 };
