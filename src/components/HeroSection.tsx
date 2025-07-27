@@ -20,7 +20,7 @@ const HeroSection = () => {
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
             <span className="block">Welcome to</span>
             <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              PureMotion
+              NOVASTRIKER
             </span>
           </h1>
           

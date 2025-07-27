@@ -1,4 +1,5 @@
-import { Apple, Zap, Heart, Clock, ChefHat, Droplets } from 'lucide-react';
+import { Apple, Zap, Heart, Clock, ChefHat, Droplets, Shield, Activity } from 'lucide-react';
+import nutritionChart from '@/assets/nutrition-chart.jpg';
 
 interface Tip {
   icon: any;
@@ -135,6 +136,55 @@ const tips: Tip[] = [
       <h3>Half-Time:</h3>
       <p>Orange slices, sports drink, or energy gel if needed for second half energy.</p>
     `
+  },
+  {
+    icon: Shield,
+    title: 'Injury Prevention',
+    description: 'Stay healthy and avoid common football injuries',
+    category: 'recovery',
+    content: `
+      <h3>Warm-Up Protocol:</h3>
+      <ul>
+        <li>5 minutes light jogging</li>
+        <li>Dynamic stretching routine</li>
+        <li>Sport-specific movements</li>
+        <li>Gradual intensity increase</li>
+      </ul>
+      
+      <h3>Strengthening Focus Areas:</h3>
+      <p>Core stability, hamstring strength, ankle stability, and hip mobility are crucial for injury prevention.</p>
+      
+      <h3>Common Injury Prevention:</h3>
+      <ul>
+        <li><strong>ACL:</strong> Proper landing technique, hamstring strength</li>
+        <li><strong>Ankle Sprains:</strong> Balance training, proprioception work</li>
+        <li><strong>Muscle Strains:</strong> Adequate warm-up, flexibility maintenance</li>
+      </ul>
+    `
+  },
+  {
+    icon: Activity,
+    title: 'Warm-Up Routines',
+    description: 'Essential pre-training and pre-match preparation',
+    category: 'recovery',
+    content: `
+      <h3>Phase 1: General Warm-Up (5-8 minutes)</h3>
+      <p>Light jogging, arm circles, leg swings to increase core temperature and blood flow.</p>
+      
+      <h3>Phase 2: Dynamic Stretching (8-10 minutes)</h3>
+      <ul>
+        <li>High knees and butt kicks</li>
+        <li>Walking lunges with rotation</li>
+        <li>Leg swings (front-to-back, side-to-side)</li>
+        <li>Arm circles and shoulder rolls</li>
+      </ul>
+      
+      <h3>Phase 3: Football-Specific (10-12 minutes)</h3>
+      <p>Ball touches, short passes, light shooting, acceleration runs with ball.</p>
+      
+      <h3>Cool-Down Importance:</h3>
+      <p>Always include 10-15 minutes of cool-down with static stretching and light walking.</p>
+    `
   }
 ];
 
@@ -217,6 +267,62 @@ const TipsPage = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Nutrition Chart Section */}
+        <div className="mt-16 glass-strong rounded-3xl p-8">
+          <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+            Football Nutrition Chart
+          </h3>
+          <div className="glass rounded-2xl p-4 mb-6">
+            <img 
+              src={nutritionChart} 
+              alt="Football Nutrition Chart" 
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+          <p className="text-muted-foreground text-center mb-6">
+            Optimal macronutrient distribution for peak football performance
+          </p>
+          
+          {/* Sample Meal Plans */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass rounded-2xl p-6">
+              <h4 className="font-bold text-foreground mb-4">Match Day Menu</h4>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <strong className="text-primary">Breakfast (3-4h before):</strong>
+                  <p className="text-muted-foreground">Oatmeal with banana, honey, and almonds</p>
+                </div>
+                <div>
+                  <strong className="text-secondary">Pre-Match (1-2h):</strong>
+                  <p className="text-muted-foreground">Toast with jam and sports drink</p>
+                </div>
+                <div>
+                  <strong className="text-accent">Post-Match:</strong>
+                  <p className="text-muted-foreground">Protein smoothie with fruit</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="glass rounded-2xl p-6">
+              <h4 className="font-bold text-foreground mb-4">Recovery Day Menu</h4>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <strong className="text-primary">Breakfast:</strong>
+                  <p className="text-muted-foreground">Greek yogurt with berries and granola</p>
+                </div>
+                <div>
+                  <strong className="text-secondary">Lunch:</strong>
+                  <p className="text-muted-foreground">Quinoa bowl with vegetables and chicken</p>
+                </div>
+                <div>
+                  <strong className="text-accent">Dinner:</strong>
+                  <p className="text-muted-foreground">Salmon with sweet potato and broccoli</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Additional Info Section */}

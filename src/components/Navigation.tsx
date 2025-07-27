@@ -10,7 +10,7 @@ const Navigation = () => {
     { icon: Play, label: 'Videos', href: '#videos' },
     { icon: BookOpen, label: 'Stats', href: '#stats' },
     { icon: Users, label: 'Tips', href: '#tips' },
-    { icon: Trophy, label: 'Matches', href: '#matches' }
+    { icon: Trophy, label: 'Videos', href: '#video-search' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -29,7 +29,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-8">
             {/* Logo */}
             <div className="font-display font-bold text-xl text-primary">
-              Pure<span className="text-foreground">Motion</span>
+              NOVA<span className="text-foreground">STRIKER</span>
             </div>
             
             {/* Nav Items */}
@@ -68,7 +68,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Mobile Logo */}
             <div className="font-display font-bold text-lg text-primary">
-              Pure<span className="text-foreground">Motion</span>
+              NOVA<span className="text-foreground">STRIKER</span>
             </div>
             
             {/* Mobile Menu Button */}

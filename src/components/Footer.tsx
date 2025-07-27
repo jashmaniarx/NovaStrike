@@ -11,10 +11,10 @@ const Footer = () => {
               {/* Logo and Description */}
               <div className="text-center md:text-left">
                 <div className="font-display font-bold text-2xl text-primary mb-2">
-                  Pure<span className="text-foreground">Motion</span>
+                  NOVA<span className="text-foreground">STRIKER</span>
                 </div>
                 <p className="text-sm text-muted-foreground max-w-md">
-                  Your ultimate football companion with live matches, expert tips, and comprehensive video library.
+                  Your ultimate football training companion with expert tips, tactical insights, and comprehensive video library.
                 </p>
               </div>
 
@@ -45,10 +45,10 @@ const Footer = () => {
                   Tips
                 </button>
                 <button 
-                  onClick={() => document.querySelector('#matches')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.querySelector('#pro-tips')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
-                  Matches
+                  Pro Tips
                 </button>
               </div>
             </div>
@@ -58,7 +58,7 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Copyright */}
                 <div className="text-sm text-muted-foreground">
-                  © 2024 PureMotion. All rights reserved.
+                  © 2025 NOVASTRIKER. All rights reserved.
                 </div>
 
                 {/* Developer Credit */}

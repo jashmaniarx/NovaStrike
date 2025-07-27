@@ -1,12 +1,11 @@
 import CustomCursor from '@/components/CustomCursor';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import SkillsGrid from '@/components/SkillsGrid';
+import VideoSearch from '@/components/VideoSearch';
 import TutorialPlayer from '@/components/TutorialPlayer';
-import TipCards from '@/components/TipCards';
-import LiveMatchFeed from '@/components/LiveMatchFeed';
-import StatsDashboard from '@/components/StatsDashboard';
+import TacticalTips from '@/components/TacticalTips';
 import TipsPage from '@/components/TipsPage';
+import ProTipsInsights from '@/components/ProTipsInsights';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -25,24 +24,29 @@ const Index = () => {
           <HeroSection />
         </section>
         
-        {/* Live Match Feed */}
-        <section id="matches">
-          <LiveMatchFeed />
+        {/* Video Search Library */}
+        <section id="video-search">
+          <VideoSearch />
         </section>
         
-        {/* Video Library */}
+        {/* Featured Tutorial */}
         <section id="videos">
           <TutorialPlayer />
         </section>
         
-        {/* Stats Dashboard */}
+        {/* Tactical Tips */}
         <section id="stats">
-          <StatsDashboard />
+          <TacticalTips />
         </section>
         
         {/* Health Tips */}
         <section id="tips">
           <TipsPage />
+        </section>
+        
+        {/* Pro Tips & Insights */}
+        <section id="pro-tips">
+          <ProTipsInsights />
         </section>
       </main>
       
