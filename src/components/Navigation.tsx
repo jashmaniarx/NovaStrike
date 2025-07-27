@@ -7,10 +7,10 @@ const Navigation = () => {
 
   const navItems = [
     { icon: Home, label: 'Home', href: '#home' },
-    { icon: Play, label: 'Videos', href: '#videos' },
-    { icon: BookOpen, label: 'Stats', href: '#stats' },
+    { icon: Play, label: 'Skills', href: '#skills' },
+    { icon: BookOpen, label: 'Tutorials', href: '#tutorials' },
     { icon: Users, label: 'Tips', href: '#tips' },
-    { icon: Trophy, label: 'Matches', href: '#matches' }
+    { icon: Trophy, label: 'Training', href: '#training' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -29,7 +29,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-8">
             {/* Logo */}
             <div className="font-display font-bold text-xl text-primary">
-              Pure<span className="text-foreground">Motion</span>
+              LQD<span className="text-foreground">Skills</span>
             </div>
             
             {/* Nav Items */}
@@ -68,7 +68,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Mobile Logo */}
             <div className="font-display font-bold text-lg text-primary">
-              Pure<span className="text-foreground">Motion</span>
+              LQD<span className="text-foreground">Skills</span>
             </div>
             
             {/* Mobile Menu Button */}
